@@ -1,6 +1,9 @@
 ---
 layout: page
-title: About
+title: About Me
+section: About
+permalink: /about
+order: 1
 ---
 
 <p class="message">

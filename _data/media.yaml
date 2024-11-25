@@ -1,0 +1,29 @@
+- name: Bluesky
+  url: https://bsky.app/profile/tejaskasetty.bsky.social
+  icon: bluesky
+  icon-group: brands
+
+- name: Github
+  url: https://www.github.com/tejaskasetty
+  icon: github
+  icon-group: brands
+
+- name: Google Scholar
+  url: "https://scholar.google.co.in/citations?user=Tg-bMK0AAAAJ&hl=en"
+  icon: google-scholar
+  icon-group: brands
+
+- name: LinkedIn
+  url: https://www.linkedin.com/in/tejaskasetty/
+  icon: linkedin
+  icon-group: brands
+
+- name: Twitter
+  url: https://www.twitter.com/tejaskasetty
+  icon: twitter
+  icon-group: brands
+
+- name: Mail
+  url: mailto:kasetty.tejas@gmail.com
+  icon: envelope
+  icon-group: solid

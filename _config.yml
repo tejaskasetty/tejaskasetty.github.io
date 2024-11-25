@@ -1,26 +1,42 @@
+# Setup
+title:            Tejas Kasetty
+tagline:          'My portfolio'
+email:            'kasetty.tejas@gmail.com'
+description:      [Artificial Intelligence,] #Congnitive Neuroscience]
+url:              https://tejaskasetty.github.io
+baseurl:          ''
+
+author:
+  name:           'Tejas Kasetty'
+  url:            https://tejaskasetty.github.io
+
+profile: /assets/img/brain-logo-icon.avif
+favicon: /assets/img/favicon.ico
+# kramdown:
+#   input: GFM
+
+include:
+  - _pages
+  - _data
+
+collections:
+  pages:
+    output: true
+
+
 # Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+markdown:         kramdown
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
-# Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-gist
+# paginate:         5
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
-
-paginate:         5
-
-# Custom vars
-version:          2.1.0
-
-github:
-  repo:           https://github.com/poole/hyde
