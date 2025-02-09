@@ -6,28 +6,12 @@ permalink: /about
 order: 1
 ---
 
-<p class="message">
+<!-- <p class="message">
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+</p> -->
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I'm an AI researcher interested in understanding high-order cognitive functions and developing AI systems that replicate them. I am also interested in developing a mathematical framework that links structural motifs in neural connectivity to functionality, through the lens of dynamics. 
 
-There are currently two themes built on Poole:
+Currently, I'm a master's student at [Mila](https://mila.quebec/en){:target="_blank"} and [Universite de Montreal](https://www.umontreal.ca/){:target="_blank"} under the supervision of [Guillaume Lajoie](https://www.guillaumelajoie.com/){:target="_blank"} and [Dhanya Sridhar](https://www.dsridhar.com/){:target="_blank"}. My research explores how compression functions as a unifying principle underlying various funcitonalities in both artifical and biological systems, from perception to abstract reasoning. Specifically, I investigate how compression plays a central role in systems with compositional structure, enabling robust and efficient generalization.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+Previously, I have interned as a Machine Learning Engineer at Intellisports Inc., focusing on human activity recognition using sequence models. I have also worked on big data, building machine learning pipelines at [MiQ](https://www.wearemiq.com/){:target="_blank"}. Outside of research, I enjoy chess, climbing, snowboarding and playing football.

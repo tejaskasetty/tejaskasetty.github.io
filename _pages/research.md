@@ -8,9 +8,10 @@ order: 4
 
 ### Recent Publications
 
+
 {% assign google_scholar = site.data.media | where: "name", "Google Scholar" | first %}
 
-For the most up-to-date list of publications, see my [Google Scholar profile]({{ google_scholar.url }}).
+For an up-to-date list of publications, see my [google scholar](https://scholar.google.co.in/citations?user=Tg-bMK0AAAAJ&hl=en){:target="_blank"}.
 
 {% assign publication_list = site.data.publications %}
 {% if publication_list != empty %}

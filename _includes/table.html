@@ -4,12 +4,14 @@
     <tr>
         <td class="paper-year">{{ paper.year }}</td>
         <td class="paper-info"><strong><a class ="paper-title" href="{{ paper.url }}" target="_blank">{{ paper.title }}.</a></strong>
+        <p>
         {% for author in paper.authors %}
             {% case author %}
                 {% when "Tejas Kasetty" %}
                     <b>{{ author }}</b>
                 {% else %}{{ author }}{% endcase %}{% unless  forloop.last %}, {% endunless %}{% endfor %}.
         <em>{{ paper.venue }}</em>{{}}
+        </p>
         </td>
     </tr>
     {% endfor %}

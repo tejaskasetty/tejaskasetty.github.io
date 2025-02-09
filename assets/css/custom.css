@@ -42,7 +42,10 @@ a.sidebar-nav-item {
     text-decoration: none; /* Remove default underline */
 }
 
-a.sidebar-nav-item:hover,
+a.sidebar-nav-item:hover {
+    text-decoration: none;
+}
+
 a.sidebar-nav-item:focus,
 .sidebar-nav-item.active {
     text-decoration: none;
@@ -142,3 +145,29 @@ div.contact-container {
 }
 
 /* Content End */
+
+table.edu-table {
+    border-collapse: separate;
+    border: none;
+    border-spacing: 1px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+tr.edu-heading {
+    border: 1px solid #000;
+}
+tr.edu-heading td:focus {
+    border-collapse: none;
+    border: none;
+    background-color: #6a9fb5;
+}
+
+/* Info box */
+.theme-base-0d edu-heading {
+    background-color: #6a9fb5; /* Box color */
+}
+
+.theme-base-0d edu-heading:focus {
+    background-color: #475f6b; /* Box color */
+}
