@@ -13,12 +13,14 @@ author:
 #profile: /assets/img/brain-logo-icon.avif
 profile: /assets/img/profile_picture.jpg
 favicon: /assets/img/favicon.ico
+cv: /assets/pdf/Tejas_Kasetty_CV.pdf
 # kramdown:
 #   input: GFM
 
 include:
   - _pages
   - _data
+  - assets
 
 collections:
   pages:

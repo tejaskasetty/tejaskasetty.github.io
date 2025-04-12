@@ -15,7 +15,7 @@ For an up-to-date list of publications, see my [google scholar](https://scholar.
 
 {% assign publication_list = site.data.publications %}
 {% if publication_list != empty %}
-    {% assign publications = publication_list | sort: "date" | reverse %}
+    {% assign publications = publication_list | sort: "year" | reverse %}
     {% include table.html %}
 {% else %}
    <i class="message">Will be updated soon...</i>

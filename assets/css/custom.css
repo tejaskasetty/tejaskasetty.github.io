@@ -44,6 +44,7 @@ a.sidebar-nav-item {
 
 a.sidebar-nav-item:hover {
     text-decoration: none;
+    color: #475f6b; /* Text color */
 }
 
 a.sidebar-nav-item:focus,
