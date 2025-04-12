@@ -1,0 +1,173 @@
+/* Sidebar Start */
+
+
+.profile-picture {
+    display: flex; justify-content: center;
+    margin: 0 auto;
+    width: 175px; /* Adjust the size of the picture */
+    height: 175px; /* Matches the width for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    /* border: 5px solid #fff; Adds a blue border */
+    border: 5px solid #475f6b; /* Adds a blue border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for depth */
+}
+
+.sidebar-about {
+    text-align: center;
+}
+
+.sidebar-about a:hover {
+    text-decoration: none;
+    color: #475f6b; /* Text color */
+}
+
+.sidebar-description {
+    margin-bottom: 1rem;
+    /* color: #2f3f47; Text color  */
+    color: #475f6b; /* Text color */
+    font-size: 20px;
+}
+
+.sidebar-nav {
+    text-align: center;
+}
+
+.sidebar-description p {
+    margin-bottom: 0;
+}
+
+a.sidebar-nav-item {
+    position: relative;
+    display: inline-block;
+    text-decoration: none; /* Remove default underline */
+}
+
+a.sidebar-nav-item:hover {
+    text-decoration: none;
+}
+
+a.sidebar-nav-item:focus,
+.sidebar-nav-item.active {
+    text-decoration: none;
+    color:  #475f6b; /* Text color */
+}
+
+
+a.sidebar-nav-item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    bottom: 0;
+    left: 50%;
+    background-color:  #475f6b; /* Underline color */
+    transition: width 0.3s ease, left 0.3s ease, color 0.3s ease; /* Animation duration and effect */
+}
+
+a.sidebar-nav-item:hover::after,
+a.sidebar-nav-item.active::after {
+    color: #475f6b; /* Change text color */
+    left: 0;
+    width: 100%; /* Fully expand the underline */
+}
+
+p.sidebar-sticky {
+    text-align: center;
+    font-size: 13px;
+    color: #515151; /* Text color */;
+    bottom: .3rem;
+    padding-top: 1rem;
+}
+
+.sidebar-media {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.sidebar-media a {
+    margin: 2px;
+    padding: 2px;
+}
+
+.sidebar-media a:hover {
+    margin: 2px;
+    padding: 2px;
+    color: #475f6b; /* Text color */
+}
+/* Sidebar End */
+
+/* Content Start */
+h1.page-title {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #475f6b; /* Text color */
+    text-rendering: optimizeLegibility;
+}
+
+
+/* Publication table */
+table.publication-table,
+table.publication-table tr {
+    border-collapse: collapse;
+    border: none;
+    background-color: #ffffff;
+    width: 100%;
+    font-size: 18px
+}
+
+td.paper-year  {
+    border: none;
+    vertical-align: top;
+    text-align: right;
+    padding: 1rem; /* Table header background color */
+}
+td.paper-info {
+    border: none;
+    vertical-align: top;
+    text-align: left;
+    padding: 1rem;/* Table header background color */
+}
+
+a.paper-title:hover {
+    
+    color: #475f6b; /* Text color */
+    text-decoration: none;
+}
+
+div.contact-container {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-size: 1.3em; 
+    padding: 1em
+}
+.contact-container i {
+    color: #1E3050;
+}
+
+/* Content End */
+
+table.edu-table {
+    border-collapse: separate;
+    border: none;
+    border-spacing: 1px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+tr.edu-heading {
+    border: 1px solid #000;
+}
+tr.edu-heading td:focus {
+    border-collapse: none;
+    border: none;
+    background-color: #6a9fb5;
+}
+
+/* Info box */
+.theme-base-0d edu-heading {
+    background-color: #6a9fb5; /* Box color */
+}
+
+.theme-base-0d edu-heading:focus {
+    background-color: #475f6b; /* Box color */
+}

@@ -1,0 +1,16 @@
+
+<table class="edu-table">
+{% for eduinfo in education %}
+    <tr class="edu-heading">
+        <td>
+            <strong>{{ eduinfo.program }}</strong> <em>{{ eduinfo.period }}</em> 
+        <br/>
+            {{ eduinfo.institution }}
+        </td>
+        <!-- <td><i class="fa-solid fa-plus sm"></i></td> -->
+    </tr>
+    <!-- <div class="edu-body">
+        <p>{{ eduinfo.description }}</p>
+    </div> -->
+{% endfor %}
+</table>

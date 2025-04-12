@@ -1,0 +1,54 @@
+<div class="sidebar">
+  <div class="container">
+   
+    <div class="sidebar-about">
+      <img src="{{ site.profile }}" alt="Profile Picture" class="profile-picture">
+      <h1>
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a>
+      </h1>
+      <div class="sidebar-description">
+        {% assign descriptions = site.description %}
+        {% if descript_list != empty %}
+          {% for descript in descriptions %}
+            <p>{{ descript }}</p>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
+
+      {% assign pages_list = site.pages |  sort: "order" %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+          <div class="sidebar-nav-item-cotainer">
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.section }}</a>
+          </div>
+             
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a> -->
+      <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a> -->
+      <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
+    </nav>
+    <div class="sidebar-media">
+        {% for media in site.data.media %}
+          <a href="{{ media.url }}" title="{{ media.name }}" target="_blank">
+          <i class="fa-{{ media.icon-group }} fa-{{ media.icon }} fa-xl"></i></a>
+        {% endfor %}
+    </div>
+
+    <p class="sidebar-sticky">&copy; {{ site.time | date: '%Y' }}. All rights reserved | This template was designed using <a href="https://hyde.getpoole.com" target="_blank">Hyde</a>
+</p>
+  </div>
+</div>

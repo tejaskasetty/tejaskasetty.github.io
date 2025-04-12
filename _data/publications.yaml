@@ -1,0 +1,15 @@
+- title: In-context Learning and Occam's Razor
+  date: 20241014
+  authors: [Eric Elmoznino, Tom Marty, Tejas Kasetty, Leo Gagnon, Sarthak Mittal, 
+            Mahan Fathi, Dhanya Sridhar, Guillaume Lajoie]
+  url: https://arxiv.org/abs/2410.14086
+  venue: Preprint
+  year: 2024
+
+- title: "Evaluating Interventional Reasoning Capability of Large Language Models"
+  date: 20241215
+  authors: [Tejas Kasetty, Divyat Mahajan, Gintare Karolina Dziugaite, Alexandre Drouin,
+            Dhanya Sridhar]
+  url: https://arxiv.org/abs/2404.05545
+  venue: CALM Workshop poster at NeurIPS
+  year: 2024

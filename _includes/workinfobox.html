@@ -1,0 +1,16 @@
+
+<table class="edu-table">
+{% for expinfo in experience %}
+    <tr class="edu-heading">
+        <td>
+            <strong>{{ expinfo.company }}</strong> <em>{{ expinfo.period }}</em> 
+        <br/>
+            {{ expinfo.position }} ({{ expinfo.location }})
+        </td>
+        <!-- <td><i class="fa-solid fa-plus sm"></i></td> -->
+    </tr>
+    <!-- <div class="edu-body">
+        <p>{{ eduinfo.description }}</p>
+    </div> -->
+{% endfor %}
+</table>

@@ -1,0 +1,43 @@
+# Setup
+title:            Tejas Kasetty
+tagline:          'My portfolio'
+email:            'kasetty.tejas@gmail.com'
+description:      [Artificial Intelligence,] #Congnitive Neuroscience]
+url:              https://tejaskasetty.github.io
+baseurl:          '/'
+
+author:
+  name:           'Tejas Kasetty'
+  url:            https://tejaskasetty.github.io
+
+#profile: /assets/img/brain-logo-icon.avif
+profile: /assets/img/profile_picture.jpg
+favicon: /assets/img/favicon.ico
+# kramdown:
+#   input: GFM
+
+include:
+  - _pages
+  - _data
+
+collections:
+  pages:
+    output: true
+
+
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-gist
+# paginate:         5
+
