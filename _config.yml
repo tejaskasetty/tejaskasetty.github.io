@@ -1,17 +1,17 @@
 # Setup
 title:            Tejas Kasetty
-tagline:          'My portfolio'
 email:            'kasetty.tejas@gmail.com'
 description:      [Artificial Intelligence,] #Congnitive Neuroscience]
 url:              https://tejaskasetty.github.io
 baseurl:
+info: Learn more about Tejas Kasetty, his research, and interests.
 
 author:
   name:           'Tejas Kasetty'
   url:            https://tejaskasetty.github.io
 
 #profile: /assets/img/brain-logo-icon.avif
-profile: /assets/img/profile_picture.jpg
+profile: /assets/img/profile_picture.webp
 favicon: /assets/img/favicon.ico
 cv: /assets/pdf/Tejas_Kasetty_CV.pdf
 # kramdown:
