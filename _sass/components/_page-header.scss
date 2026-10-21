@@ -1,0 +1,11 @@
+// Profile above the content on small screens, where the sidebar is a top bar.
+
+.page-header {
+  display: none;
+  padding: .5rem 0 2.25rem;
+
+  .profile { --profile-size: 112px; }
+  .profile-name { margin-top: 1rem; }
+
+  @include below($bp-sidebar) { display: block; }
+}

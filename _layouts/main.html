@@ -8,9 +8,10 @@
     {% include sidebar.html %}
 
     <main class="content container">
+      {% include page-header.html %}
       {{ content }}
     </main>
 
-    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+    {% include scripts.html %}
   </body>
 </html>

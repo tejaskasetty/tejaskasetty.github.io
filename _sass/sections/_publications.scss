@@ -1,0 +1,42 @@
+// Publications (_includes/sections/research.html)
+
+.pub-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pub {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+
+  & + & { border-top: 1px solid var(--rule); }
+}
+
+.pub-year {
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  padding-top: .1rem;
+}
+
+.content a.pub-title {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover { color: var(--accent); }
+}
+
+.pub-authors,
+.pub-venue {
+  margin: .25rem 0 0 !important;
+  font-size: .92rem;
+}
+.pub-venue {
+  color: var(--accent);
+  font-style: italic;
+}

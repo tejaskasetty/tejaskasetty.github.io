@@ -1,0 +1,69 @@
+// Dark sidebar: fixed on the left on desktop, a sticky top bar on small
+// screens (theme toggle, section nav, links menu; the profile moves to the
+// page header).
+
+.sidebar {
+  position: relative;
+  padding: 2.5rem 1.5rem 1.5rem;
+  color: var(--sidebar-text);
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  text-align: center;
+  transition: background-color .3s ease, border-color .3s ease;
+
+  a { color: var(--sidebar-strong); }
+  a:hover,
+  a:focus { text-decoration: none; }
+
+  .profile {
+    --profile-name-color: var(--sidebar-strong);
+    --profile-accent: var(--sidebar-accent);
+    --profile-ring: 3px solid rgba(255, 255, 255, .12);
+    --profile-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+  }
+
+  @include above($bp-sidebar) {
+    position: fixed;
+    width: 17rem;
+    padding: 3rem 1.75rem 1.5rem;
+    overflow-y: auto;
+  }
+
+  @include below($bp-sidebar) {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    padding: env(safe-area-inset-top, 0px) .5rem 0;
+    box-shadow: 0 1px 0 var(--sidebar-line), 0 6px 20px rgba(0, 0, 0, .18);
+
+    .profile { display: none; }
+  }
+}
+
+.sidebar-inner {
+  @include above($bp-sidebar) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  @include below($bp-sidebar) {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    height: var(--topbar-height);
+  }
+}
+
+.sidebar-footer {
+  margin: 2rem 0 0;
+  color: var(--sidebar-faint);
+  font-size: .75rem;
+
+  @include above($bp-sidebar) { margin-top: auto; padding-top: 2rem; }
+  @include below($bp-sidebar) { display: none; }
+}

@@ -1,0 +1,48 @@
+// Design tokens. Light theme on :root; dark theme is set on <html> by
+// assets/js/theme.js.
+
+:root {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  --ink: #17212a;          /* headings */
+  --text: #38434d;         /* body */
+  --muted: #6b7783;        /* dates, secondary */
+  --rule: #e6eaee;         /* hairlines */
+  --bg: #ffffff;
+  --accent: #23688f;       /* links */
+  --accent-soft: #eaf3f8;
+  --link-underline: rgba(35, 104, 143, .3);
+  --code-bg: #f5f7f9;
+
+  --sidebar-bg: #14232d;
+  --sidebar-text: rgba(255, 255, 255, .68);
+  --sidebar-strong: #ffffff;
+  --sidebar-faint: rgba(255, 255, 255, .38);
+  --sidebar-accent: #8fc6df;
+  --sidebar-hover: rgba(255, 255, 255, .09);
+  --sidebar-line: rgba(255, 255, 255, .08);
+  --sidebar-border: transparent;
+
+  --topbar-height: 3.25rem;
+  --ease: cubic-bezier(.22, .8, .24, 1);
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --ink: #e9eef2;
+  --text: #c2cbd3;
+  --muted: #8a96a2;
+  --rule: #25313a;
+  --bg: #10181e;
+  --accent: #7dbbdc;
+  --accent-soft: #16252f;
+  --link-underline: rgba(125, 187, 220, .35);
+  --code-bg: #172129;
+
+  --sidebar-bg: #0b1217;
+  --sidebar-border: #1c2830;
+
+  color-scheme: dark;
+}

@@ -1,0 +1,13 @@
+{%- comment -%}
+  One link per entry in _data/sections.yaml. The indicator is moved by
+  assets/js/scroll-spy.js.
+{%- endcomment -%}
+<nav class="section-nav" aria-label="Sections">
+  <span class="section-nav-indicator" aria-hidden="true"></span>
+  {% for section in site.data.sections %}
+    <a class="section-nav-item" href="{{ '/' | relative_url }}#{{ section.id }}" data-section="{{ section.id }}">{{ section.nav | default: section.title }}</a>
+  {% endfor %}
+  {% if site.cv %}
+    <a class="section-nav-item section-nav-cv" href="{{ site.cv | relative_url }}" target="_blank" rel="noopener">CV <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+  {% endif %}
+</nav>
