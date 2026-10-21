@@ -1,3 +1,10 @@
+- title: Defining and Generating Compositional Structure
+  date: 20261014
+  authors: [Eric Elmoznino, Tejas Kasetty, Blaise Agüera y Arcas, Yoshua Bengio, Guillaume Lajoie]
+  url: https://arxiv.org/abs/2610.20922
+  venue: arXiv preprint
+  year: 2026
+
 - title: In-context Learning and Occam's Razor
   date: 20241014
   authors: [Eric Elmoznino, Tom Marty, Tejas Kasetty, Leo Gagnon, Sarthak Mittal, 
