@@ -4,7 +4,7 @@
   display: none;
   padding: .5rem 0 2.25rem;
 
-  .profile { --profile-size: 112px; }
+  .profile { --profile-size: 144px; }
   .profile-name { margin-top: 1rem; }
 
   @include below($bp-sidebar) { display: block; }
