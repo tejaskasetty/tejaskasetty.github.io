@@ -18,7 +18,7 @@
     <nav class="sidebar-nav" aria-label="Sections">
       <span class="nav-indicator" aria-hidden="true"></span>
       {% for section in site.data.sections %}
-        <a class="sidebar-nav-item" href="{{ '/' | relative_url }}#{{ section.id }}" data-section="{{ section.id }}">{{ section.title }}</a>
+        <a class="sidebar-nav-item" href="{{ '/' | relative_url }}#{{ section.id }}" data-section="{{ section.id }}">{{ section.nav | default: section.title }}</a>
       {% endfor %}
       {% if site.cv %}
         <a class="sidebar-nav-item sidebar-nav-cv" href="{{ site.cv | relative_url }}" target="_blank" rel="noopener">CV <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>

@@ -1,5 +1,5 @@
 {% assign scholar = site.data.media | where: "name", "Google Scholar" | first %}
-<p class="section-lead">For an up-to-date list of publications, see my <a href="{{ scholar.url }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
+<p class="section-lead">For a full and up-to-date list, see my <a href="{{ scholar.url }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
 
 {% assign publications = site.data.publications | sort: "year" | reverse %}
 {% if publications.size > 0 %}
