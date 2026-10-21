@@ -1,0 +1,88 @@
+// Section links with a single sliding indicator (positioned by
+// assets/js/scroll-spy.js). A column on desktop; a sideways-scrolling row in
+// the top bar on small screens.
+
+.section-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  margin: 2.25rem 0 0;
+
+  @include below($bp-sidebar) {
+    flex: 1;
+    min-width: 0;
+    flex-direction: row;
+    gap: .1rem;
+    margin: 0;
+    padding: 0 .75rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    // Fade both edges to hint that the row scrolls
+    $fade: linear-gradient(to right, transparent, #000 .75rem, #000 calc(100% - .75rem), transparent);
+    -webkit-mask-image: $fade;
+            mask-image: $fade;
+
+    &::-webkit-scrollbar { display: none; }
+  }
+
+  .section-nav-item {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: .4rem 1rem;
+    border-radius: 8px;
+    color: var(--sidebar-text);
+    font-size: .95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: color .25s ease;
+
+    &:hover,
+    &.active { color: var(--sidebar-strong); }
+
+    @include below($bp-sidebar) {
+      flex: none;
+      padding: .35rem .7rem;
+      font-size: .9rem;
+      white-space: nowrap;
+    }
+  }
+
+  // The CV lives in the links menu on small screens
+  .section-nav-cv {
+    i {
+      margin-left: .2rem;
+      font-size: .65em;
+      vertical-align: .15em;
+      opacity: .7;
+    }
+    @include below($bp-sidebar) { display: none; }
+  }
+}
+
+.section-nav-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border-radius: 8px;
+  background: var(--sidebar-hover);
+  box-shadow: inset 3px 0 0 var(--sidebar-accent);
+  opacity: 0;
+  pointer-events: none;
+
+  &.is-visible { opacity: 1; }
+
+  .section-nav.is-ready & {
+    transition:
+      transform .45s var(--ease),
+      width .45s var(--ease),
+      height .45s var(--ease),
+      opacity .3s ease;
+
+    @include reduced-motion { transition: opacity .2s ease; }
+  }
+
+  @include below($bp-sidebar) { box-shadow: inset 0 -2px 0 var(--sidebar-accent); }
+}

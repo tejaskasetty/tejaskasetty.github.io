@@ -1,42 +1,9 @@
 <aside class="sidebar">
-  <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
-    <i class="fa-solid fa-moon" aria-hidden="true"></i>
-    <i class="fa-solid fa-sun" aria-hidden="true"></i>
-  </button>
+  {% include components/theme-toggle.html %}
   <div class="sidebar-inner">
-
-    <div class="sidebar-about">
-      <a href="{{ '/' | relative_url }}#about" class="profile-link">
-        <img src="{{ site.profile | relative_url }}" alt="Portrait of {{ site.title }}" class="profile-picture" width="160" height="160">
-      </a>
-      <h1 class="sidebar-name">
-        <a href="{{ '/' | relative_url }}#about">{{ site.title }}</a>
-      </h1>
-      <div class="sidebar-description">
-        {% for descript in site.description %}
-          <p>{{ descript }}</p>
-        {% endfor %}
-      </div>
-    </div>
-
-    <nav class="sidebar-nav" aria-label="Sections">
-      <span class="nav-indicator" aria-hidden="true"></span>
-      {% for section in site.data.sections %}
-        <a class="sidebar-nav-item" href="{{ '/' | relative_url }}#{{ section.id }}" data-section="{{ section.id }}">{{ section.nav | default: section.title }}</a>
-      {% endfor %}
-      {% if site.cv %}
-        <a class="sidebar-nav-item sidebar-nav-cv" href="{{ site.cv | relative_url }}" target="_blank" rel="noopener">CV <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-      {% endif %}
-    </nav>
-
-    <div class="sidebar-media">
-      {% for media in site.data.media %}
-        <a href="{{ media.url }}" title="{{ media.name }}" aria-label="{{ media.name }}" target="_blank" rel="noopener">
-          <i class="fa-{{ media.icon-group }} fa-{{ media.icon }}" aria-hidden="true"></i>
-        </a>
-      {% endfor %}
-    </div>
-
+    {% include components/profile.html tag="h1" %}
+    {% include components/section-nav.html %}
+    {% include components/links-menu.html %}
     <p class="sidebar-footer">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
   </div>
 </aside>

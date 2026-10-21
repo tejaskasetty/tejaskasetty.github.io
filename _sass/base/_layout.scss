@@ -1,0 +1,53 @@
+// Page frame: the content column and the sections inside it.
+
+.content {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+
+  @include above($bp-sidebar) {
+    max-width: 44rem;
+    margin-left: 20rem;
+    margin-right: 2.5rem;
+    padding-top: 4.5rem;
+  }
+  @include above($bp-wide) {
+    margin-left: 22rem;
+    margin-right: 4rem;
+  }
+}
+
+.section {
+  scroll-margin-top: calc(var(--topbar-height) + 1rem);
+  padding-bottom: 3rem;
+
+  & + & {
+    padding-top: 3rem;
+    border-top: 1px solid var(--rule);
+  }
+  p { margin-bottom: 1rem; }
+
+  @include above($bp-sidebar) { scroll-margin-top: 2rem; }
+}
+
+.section-title {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.section-lead { color: var(--muted); }
+#about p { text-align: left; }
+
+// Scroll reveal (class added by assets/js/reveal.js)
+.section.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+
+  &.is-revealed {
+    opacity: 1;
+    transform: none;
+  }
+}

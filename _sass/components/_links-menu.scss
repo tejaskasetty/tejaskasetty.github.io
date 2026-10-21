@@ -1,0 +1,91 @@
+// CV and social links. A row of icons under the nav on desktop; a dropdown
+// opened from the top bar on small screens (assets/js/links-menu.js).
+
+.links-menu-toggle,
+.links-menu-cv,
+.social-label { display: none; }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-top: 2rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    color: var(--sidebar-text);
+    font-size: 1.05rem;
+    transition: color .2s ease, background-color .2s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--sidebar-strong);
+      background-color: var(--sidebar-hover);
+    }
+  }
+}
+
+@include below($bp-sidebar) {
+  .links-menu { position: relative; flex: none; }
+  .links-menu-toggle { display: inline-flex; }
+
+  .links-menu-panel {
+    position: absolute;
+    top: calc(100% + .6rem);
+    right: 0;
+    min-width: 12rem;
+    padding: .4rem;
+    border: 1px solid var(--sidebar-line);
+    border-radius: 12px;
+    background: var(--sidebar-bg);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .3);
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-.35rem);
+    transition: opacity .2s ease, transform .2s var(--ease), visibility 0s .2s;
+
+    .links-menu.is-open & {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition: opacity .2s ease, transform .2s var(--ease);
+    }
+
+    // Each link becomes a labelled row
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: .75rem;
+      width: auto;
+      height: auto;
+      padding: .55rem .75rem;
+      border-radius: 8px;
+      color: var(--sidebar-text);
+      font-size: .92rem;
+      font-weight: 500;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--sidebar-strong);
+        background-color: var(--sidebar-hover);
+      }
+    }
+    i { width: 1.1rem; text-align: center; font-size: 1rem; }
+  }
+
+  .social-links { display: block; margin: 0; }
+  .links-menu-cv + .social-links {
+    margin-top: .25rem;
+    padding-top: .25rem;
+    border-top: 1px solid var(--sidebar-line);
+  }
+  .social-label { display: inline; }
+}

@@ -1,0 +1,15 @@
+// Light/dark switch. Top-left of the sidebar on desktop; first item in the
+// top bar on small screens.
+
+.theme-toggle {
+  @include above($bp-sidebar) {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  // Show the icon for the theme you would switch to
+  .fa-sun { display: none; }
+  :root[data-theme="dark"] & .fa-sun { display: inline; }
+  :root[data-theme="dark"] & .fa-moon { display: none; }
+}

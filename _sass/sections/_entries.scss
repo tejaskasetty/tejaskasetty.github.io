@@ -1,0 +1,32 @@
+// Experience and education entries (_includes/sections/{experience,education}.html)
+
+.entry-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entry {
+  padding: .85rem 0;
+
+  & + & { border-top: 1px solid var(--rule); }
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0 1rem;
+}
+
+.entry-title { color: var(--ink); font-weight: 600; }
+
+.entry-period {
+  color: var(--muted);
+  font-size: .88rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.entry-sub { color: var(--text); font-size: .95rem; }

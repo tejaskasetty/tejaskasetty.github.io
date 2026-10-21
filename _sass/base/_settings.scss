@@ -1,0 +1,16 @@
+// Breakpoints and media-query helpers shared by every partial.
+
+$bp-narrow:     30em;  // news/publication rows stack below this
+$bp-sidebar:    48em;  // sidebar on the left at and above; top bar below
+$bp-large-type: 58em;
+$bp-wide:       64em;
+
+@mixin above($bp) {
+  @media (min-width: $bp) { @content; }
+}
+@mixin below($bp) {
+  @media (max-width: $bp - .01em) { @content; }
+}
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) { @content; }
+}

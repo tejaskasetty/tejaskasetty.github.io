@@ -1,0 +1,23 @@
+{%- comment -%}
+  CV and social links from _data/media.yaml. A row of icons on desktop; a
+  dropdown on small screens (assets/js/links-menu.js).
+{%- endcomment -%}
+<div class="links-menu">
+  <button class="icon-button links-menu-toggle" type="button" aria-expanded="false" aria-controls="links-menu-panel" aria-label="Links" title="Links">
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+  </button>
+  <div class="links-menu-panel" id="links-menu-panel">
+    {% if site.cv %}
+      <a class="links-menu-cv" href="{{ site.cv | relative_url }}" target="_blank" rel="noopener">
+        <i class="fa-solid fa-file-lines" aria-hidden="true"></i><span>CV</span>
+      </a>
+    {% endif %}
+    <div class="social-links">
+      {% for media in site.data.media %}
+        <a href="{{ media.url }}" title="{{ media.name }}" aria-label="{{ media.name }}" target="_blank" rel="noopener">
+          <i class="fa-{{ media.icon-group }} fa-{{ media.icon }}" aria-hidden="true"></i><span class="social-label">{{ media.name }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

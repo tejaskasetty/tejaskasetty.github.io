@@ -1,0 +1,42 @@
+// Portrait, name and tagline. Context sets the colors and size through
+// --profile-* custom properties (see sidebar and page header).
+
+.profile {
+  --profile-size: 160px;
+  text-align: center;
+
+  a { color: inherit; text-decoration: none; }
+}
+
+.profile-link { display: inline-block; border-radius: 50%; }
+
+.profile-picture {
+  display: block;
+  width: var(--profile-size);
+  height: var(--profile-size);
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 50%;
+  border: var(--profile-ring, 0);
+  box-shadow: var(--profile-shadow, 0 8px 24px rgba(0, 0, 0, .15));
+}
+
+.profile-name {
+  margin: 1.25rem 0 .25rem;
+  color: var(--profile-name-color, var(--ink));
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.2;
+}
+
+.profile-description {
+  color: var(--profile-accent, var(--accent));
+  font-size: .85rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+
+  p { margin: 0; }
+}

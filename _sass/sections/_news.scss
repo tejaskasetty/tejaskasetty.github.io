@@ -1,0 +1,38 @@
+// News: date-stamped list (_includes/sections/news.html)
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1rem;
+  padding: .6rem 0;
+
+  & + & { border-top: 1px dashed var(--rule); }
+
+  @include below($bp-narrow) { grid-template-columns: 1fr; gap: 0; }
+}
+
+.news-date {
+  color: var(--muted);
+  font-size: .85rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  padding-top: .1rem;
+}
+
+.news-more {
+  margin-top: .75rem;
+
+  summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-size: .9rem;
+    font-weight: 500;
+  }
+}

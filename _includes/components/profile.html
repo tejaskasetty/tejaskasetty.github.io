@@ -1,0 +1,18 @@
+{%- comment -%}
+  Portrait, name and tagline. Shown in the sidebar on desktop and in the page
+  header on small screens. Params: tag (heading element, default "p").
+{%- endcomment -%}
+{%- assign tag = include.tag | default: 'p' -%}
+<div class="profile">
+  <a href="{{ '/' | relative_url }}#about" class="profile-link">
+    <img src="{{ site.profile | relative_url }}" alt="Portrait of {{ site.title }}" class="profile-picture" width="160" height="160">
+  </a>
+  <{{ tag }} class="profile-name">
+    <a href="{{ '/' | relative_url }}#about">{{ site.title }}</a>
+  </{{ tag }}>
+  <div class="profile-description">
+    {% for descript in site.description %}
+      <p>{{ descript }}</p>
+    {% endfor %}
+  </div>
+</div>
