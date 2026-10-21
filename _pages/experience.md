@@ -1,12 +1,5 @@
 ---
-layout: page
-title: Experience
-section: Experience
+layout: redirect
+redirect_to: experience
 permalink: /experience
-order: 3
 ---
-
-{% assign experience = site.data.experience | sort: "date" | reverse %}
-<div>
-    {% include workinfobox.html %}
-</div>

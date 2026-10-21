@@ -1,12 +1,5 @@
 ---
-layout: page
-title: Education
-section: Education
+layout: redirect
+redirect_to: education
 permalink: /eduction
-order: 2
 ---
-
-{% assign education = site.data.education %}
-<div>
-    {% include infobox.html %}
-</div>

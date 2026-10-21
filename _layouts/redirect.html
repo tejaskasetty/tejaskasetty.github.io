@@ -1,0 +1,14 @@
+{% assign target = '/' | relative_url | append: '#' | append: page.redirect_to %}
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting&hellip;</title>
+    <link rel="canonical" href="{{ site.url }}{{ target }}">
+    <meta http-equiv="refresh" content="0; url={{ target }}">
+    <meta name="robots" content="noindex">
+  </head>
+  <body>
+    <p>This page has moved to <a href="{{ target }}">{{ site.url }}{{ target }}</a>.</p>
+  </body>
+</html>
