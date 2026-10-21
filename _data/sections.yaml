@@ -1,5 +1,6 @@
 # Sections of the single-page site, in display order.
-# `id` is the URL anchor (/#id); `include` is the file in _includes/sections/.
+# `id` is the URL anchor (/#id); `include` is the file in _includes/sections/;
+# `nav` (optional) is a shorter sidebar label than `title`.
 - id: about
   title: About
   include: about.md
@@ -9,7 +10,8 @@
   include: news.html
 
 - id: research
-  title: Research
+  title: Selected Publications
+  nav: Research
   include: research.html
 
 - id: experience
