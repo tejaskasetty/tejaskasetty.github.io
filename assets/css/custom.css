@@ -291,6 +291,17 @@ a { color: var(--accent); }
   border-top: 1px solid var(--rule);
 }
 
+/* Scroll reveal (class added by assets/js/main.js) */
+.section.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+.section.reveal.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
 .section-title {
   margin: 0 0 1.25rem;
   font-family: var(--font-serif);
