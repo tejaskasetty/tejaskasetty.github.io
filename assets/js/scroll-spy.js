@@ -1,65 +1,10 @@
-// Theme toggle: flip between light and dark and remember the choice.
-// Until the visitor picks one, follow system changes live.
-(function () {
-  var root = document.documentElement;
-  var toggle = document.querySelector('.theme-toggle');
-  var system = window.matchMedia('(prefers-color-scheme: dark)');
-
-  function apply(theme) {
-    root.setAttribute('data-theme', theme);
-    if (toggle) {
-      toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-      toggle.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
-    }
-  }
-
-  function saved() {
-    try { return localStorage.getItem('theme'); } catch (e) { return null; }
-  }
-
-  apply(root.getAttribute('data-theme') || 'light');
-
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      apply(next);
-      try { localStorage.setItem('theme', next); } catch (e) {}
-    });
-  }
-
-  var onSystemChange = function (e) { if (!saved()) apply(e.matches ? 'dark' : 'light'); };
-  if (system.addEventListener) system.addEventListener('change', onSystemChange);
-  else if (system.addListener) system.addListener(onSystemChange);
-})();
-
-// Reveal sections as they scroll into view. Sections already on screen
-// at load stay visible so nothing flickers.
-(function () {
-  if (!('IntersectionObserver' in window)) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-revealed');
-      observer.unobserve(entry.target);
-    });
-  }, { rootMargin: '0px 0px -12% 0px' });
-
-  document.querySelectorAll('.content .section').forEach(function (section) {
-    if (section.getBoundingClientRect().top < window.innerHeight) return;
-    section.classList.add('reveal');
-    observer.observe(section);
-  });
-})();
-
 // Scroll-spy: highlight the sidebar link for the section currently in view,
 // and slide a single indicator between links so the change is smooth.
 (function () {
-  var nav = document.querySelector('.sidebar-nav');
+  var nav = document.querySelector('.section-nav');
   if (!nav) return;
 
-  var indicator = nav.querySelector('.nav-indicator');
+  var indicator = nav.querySelector('.section-nav-indicator');
   var links = Array.prototype.slice.call(nav.querySelectorAll('a[data-section]'));
   var sections = links
     .map(function (link) { return document.getElementById(link.dataset.section); })
@@ -74,6 +19,16 @@
     indicator.style.height = link.offsetHeight + 'px';
     indicator.style.transform = 'translate(' + link.offsetLeft + 'px,' + link.offsetTop + 'px)';
     indicator.classList.add('is-visible');
+    keepInView(link);
+  }
+
+  // On small screens the nav scrolls sideways; keep the active link centred.
+  function keepInView(link) {
+    if (nav.scrollWidth <= nav.clientWidth) return;
+    nav.scrollTo({
+      left: link.offsetLeft - (nav.clientWidth - link.offsetWidth) / 2,
+      behavior: nav.classList.contains('is-ready') ? 'smooth' : 'auto'
+    });
   }
 
   function setActive(id) {
