@@ -1,4 +1,7 @@
 # Recent news, newest first. `text` supports Markdown (links, bold, ...).
+- date: 2026-10-14
+  text: New preprint, [Defining and Generating Compositional Structure](https://arxiv.org/abs/2610.20922){:target="_blank"}, is out on arXiv.
+
 - date: 2025-07-13
   text: Presented [In-context Learning and Occam's Razor](https://arxiv.org/abs/2410.14086){:target="_blank"} at **ICML 2025** in Vancouver.
 
