@@ -1,0 +1,12 @@
+{% assign experience = site.data.experience | sort: "date" | reverse %}
+<ul class="entry-list">
+  {% for exp in experience %}
+  <li class="entry">
+    <div class="entry-head">
+      <span class="entry-title">{{ exp.position }}</span>
+      <span class="entry-period">{{ exp.period }}</span>
+    </div>
+    <div class="entry-sub">{{ exp.company }} &middot; {{ exp.location }}</div>
+  </li>
+  {% endfor %}
+</ul>

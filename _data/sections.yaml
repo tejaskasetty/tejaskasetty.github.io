@@ -1,0 +1,21 @@
+# Sections of the single-page site, in display order.
+# `id` is the URL anchor (/#id); `include` is the file in _includes/sections/.
+- id: about
+  title: About
+  include: about.md
+
+- id: news
+  title: News
+  include: news.html
+
+- id: research
+  title: Research
+  include: research.html
+
+- id: experience
+  title: Experience
+  include: experience.html
+
+- id: education
+  title: Education
+  include: education.html
