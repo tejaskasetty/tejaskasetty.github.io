@@ -13,13 +13,37 @@
   --bg: #ffffff;
   --accent: #23688f;       /* links */
   --accent-soft: #eaf3f8;
+  --link-underline: rgba(35, 104, 143, .3);
+  --code-bg: #f5f7f9;
 
   --sidebar-bg: #14232d;
   --sidebar-text: rgba(255, 255, 255, .68);
   --sidebar-strong: #ffffff;
   --sidebar-accent: #8fc6df;
 
+  --sidebar-border: transparent;
+
   --ease: cubic-bezier(.22, .8, .24, 1);
+
+  color-scheme: light;
+}
+
+/* Dark theme: set on <html> by assets/js/theme.js */
+:root[data-theme="dark"] {
+  --ink: #e9eef2;
+  --text: #c2cbd3;
+  --muted: #8a96a2;
+  --rule: #25313a;
+  --bg: #10181e;
+  --accent: #7dbbdc;
+  --accent-soft: #16252f;
+  --link-underline: rgba(125, 187, 220, .35);
+  --code-bg: #172129;
+
+  --sidebar-bg: #0b1217;
+  --sidebar-border: #1c2830;
+
+  color-scheme: dark;
 }
 
 /* Base */
@@ -42,7 +66,16 @@ html {
 body {
   color: var(--text);
   background-color: var(--bg);
+  transition: background-color .3s ease, color .3s ease;
 }
+
+/* Elements styled with fixed colors in poole.css (used by blog posts) */
+code, pre, .message { background-color: var(--code-bg); }
+blockquote, .post-date, .related-posts li small { color: var(--muted); }
+hr { border-top-color: var(--rule); border-bottom-color: transparent; }
+table, td, th { border-color: var(--rule); }
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th { background-color: var(--code-bg); }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--ink);
@@ -56,7 +89,7 @@ a { color: var(--accent); }
 .content a {
   color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: rgba(35, 104, 143, .3);
+  text-decoration-color: var(--link-underline);
   text-decoration-thickness: 1px;
   text-underline-offset: .18em;
   transition: text-decoration-color .2s ease, color .2s ease;
@@ -78,7 +111,9 @@ a { color: var(--accent); }
   padding: 2.5rem 1.5rem 1.5rem;
   color: var(--sidebar-text);
   background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
   text-align: center;
+  transition: background-color .3s ease, border-color .3s ease;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -362,3 +397,37 @@ a { color: var(--accent); }
   white-space: nowrap;
 }
 .entry-sub { color: var(--text); font-size: .95rem; }
+
+/* Theme toggle */
+
+.sidebar { position: relative; }
+@media (min-width: 48em) {
+  .sidebar { position: fixed; }
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--sidebar-text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color .2s ease, background-color .2s ease;
+}
+.theme-toggle:hover {
+  color: var(--sidebar-strong);
+  background-color: rgba(255, 255, 255, .09);
+}
+/* Show the icon for the theme you would switch to */
+.theme-toggle .fa-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .fa-sun { display: inline; }
+:root[data-theme="dark"] .theme-toggle .fa-moon { display: none; }

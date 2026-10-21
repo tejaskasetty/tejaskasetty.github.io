@@ -6,6 +6,9 @@
 
   <title>{% if page.title == "Home" %}{{ site.title }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
 
+  <!-- Applies the saved/system theme before first paint (no inline scripts under the CSP) -->
+  <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
