@@ -1,0 +1,17 @@
+{% assign news = site.data.news | sort: "date" | reverse %}
+{% assign visible = 6 %}
+<ul class="news-list">
+  {% for item in news limit: visible %}
+    {% include news-item.html item=item %}
+  {% endfor %}
+</ul>
+{% if news.size > visible %}
+<details class="news-more">
+  <summary>Older news</summary>
+  <ul class="news-list">
+    {% for item in news offset: visible %}
+      {% include news-item.html item=item %}
+    {% endfor %}
+  </ul>
+</details>
+{% endif %}
