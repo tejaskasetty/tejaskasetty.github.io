@@ -1,0 +1,12 @@
+# Recent news, newest first. `text` supports Markdown (links, bold, ...).
+- date: 2025-07-13
+  text: Presented [In-context Learning and Occam's Razor](https://arxiv.org/abs/2410.14086){:target="_blank"} at **ICML 2025** in Vancouver.
+
+- date: 2024-12-14
+  text: Presented [Evaluating Interventional Reasoning Capability of Large Language Models](https://arxiv.org/abs/2404.05545){:target="_blank"} as a poster at the CALM Workshop, **NeurIPS 2024**.
+
+- date: 2024-10-18
+  text: New preprint, [In-context Learning and Occam's Razor](https://arxiv.org/abs/2410.14086){:target="_blank"}, is out on arXiv.
+
+- date: 2023-07-01
+  text: Joined [Mila](https://mila.quebec/en){:target="_blank"} as a Research Intern.
