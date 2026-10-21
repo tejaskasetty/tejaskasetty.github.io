@@ -1,0 +1,11 @@
+<ul class="entry-list">
+  {% for edu in site.data.education %}
+  <li class="entry">
+    <div class="entry-head">
+      <span class="entry-title">{{ edu.program }}</span>
+      <span class="entry-period">{{ edu.period }}</span>
+    </div>
+    <div class="entry-sub">{{ edu.institution }}</div>
+  </li>
+  {% endfor %}
+</ul>
